@@ -34,7 +34,7 @@ a{
 
 /* TYPOGRAPHY */
 h1{
-    @apply text-6xl font-bold
+    @apply max-md:text-5xl text-6xl font-bold
 }
 h2{
     @apply text-4xl lg:text-5xl font-semibold;
