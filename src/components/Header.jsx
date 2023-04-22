@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 import CreoLogo from '../assets/images/logos/creo-logo.svg'
@@ -12,6 +12,19 @@ const Header = () => {
     const handleNav = () => {
         setShowNav(!showNav)
     }
+
+    const ref = useRef(null)
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setShowNav(false)
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [ref])
 
     return (
         <header className='py-6 3xl:py-12 relative z-50'>
@@ -34,7 +47,7 @@ const Header = () => {
                 <FiMenu onClick={handleNav} className='max-lg:block hidden text-3xl'/>
             </nav>
 
-            <div className={`absolute left-0 w-full h-[50vh] shadow-2xl ${showNav === true ? 'top-0' : 'top-[-50vh]'} transition-all duration-300`} style={{ backgroundColor: 'rgba(165, 20, 252, 0.2)', backdropFilter: 'blur(18px)' }}>
+            <div ref={ref} className={`absolute left-0 w-full h-[50vh] shadow-2xl ${showNav === true ? 'top-0' : 'top-[-50vh]'} transition-all duration-300`} style={{ backgroundColor: 'rgba(165, 20, 252, 0.2)', backdropFilter: 'blur(18px)' }}>
                 <div className='py-6 container'>
                     <div className='w-full flex items-center justify-between'>
                         <img src={CreoLogo} alt="img" className='w-20 md:w-28 inline-block' />
