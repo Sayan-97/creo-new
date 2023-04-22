@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 import CreoLogo from '../assets/images/logos/creo-logo.svg'
 import { FiMenu } from 'react-icons/fi'
@@ -15,16 +16,18 @@ const Header = () => {
     return (
         <header className='py-6 3xl:py-12 relative z-50'>
             <nav className='container flex items-center max-lg:justify-between'>
-                <img src={CreoLogo} alt="img" className='w-20 md:w-28 inline-block'/>
+                <Link to='/'>
+                    <img src={CreoLogo} alt="img" className='w-20 md:w-28 inline-block' />
+                </Link>
                 <div className='hidden lg:flex items-center justify-between w-full'>
                     <ul className='pl-10 space-x-6'>
-                        <a href="#">Find Talent</a>
+                        <a href="#findtalent">Find Talent</a>
                         <a href="#">Find Work</a>
                         <a href="#">Why Creo?</a>
                     </ul>
                     <div className='space-x-4'>
-                        <button className='primary w-32 h-11'>Sign Up</button>
-                        <button className='secondary before:content-["Log_In"] w-32 h-11'>Log In</button>
+                        <Link to='/signup'><button className='primary w-32 h-11'>Sign Up</button></Link>
+                        <Link to='/login'><button className='secondary before:content-["Log_In"] w-32 h-11'>Log In</button></Link>
                     </div>
                 </div>
 

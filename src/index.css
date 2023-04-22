@@ -36,40 +36,43 @@ a{
 h1{
     @apply text-6xl font-bold
 }
-
 h2{
     @apply text-4xl lg:text-5xl font-semibold;
 }
-
 h3{
     @apply text-4xl font-semibold;
 }
-
 h4{
     @apply text-3xl font-semibold
 }
-
 h5{
     @apply text-2xl font-medium;
 }
-
 h6{
     @apply text-xl font-medium;
 }
-
 p{
     @apply text-base lg:text-lg;
+}
+
+/* Forms */
+form{
+    @apply w-[35%] rounded-card bg-accent px-5 py-10 mx-auto;
+}
+input{
+    @apply h-10 rounded-button outline-[#A514FC] px-2 text-black text-lg font-medium placeholder:text-placeholder placeholder:text-lg placeholder:font-regular
+}
+select{
+    @apply h-10 rounded-button outline-[#A514FC] px-2 text-black;
 }
 
 /* BUTTONS */
 button {
     @apply text-lg font-medium hover:text-white hover:transform hover:scale-105 transition-all ease-out;
 }
-
 .primary {
     @apply bg-gradient rounded-button;
 }
-
 .secondary {
     @apply relative bg-gradient rounded-button before:rounded-button before:bg-background before:absolute before:top-[1px] before:right-[1px] before:bottom-[1px] before:left-[1px] before:flex before:items-center before:justify-center;
 }
@@ -77,4 +80,8 @@ button {
 /* Text Gradient */
 .textGrad{
     @apply bg-gradient text-transparent bg-clip-text;
+}
+
+.required{
+    @apply text-base text-textGray italic;
 }

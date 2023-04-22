@@ -30,7 +30,7 @@ const HireTalent = () => {
     ]
 
     return (
-        <div className='w-full flex flex-col items-center relative'>
+        <div id='findtalent' className='w-full flex flex-col items-center relative'>
             <div className='w-full flex flex-col items-center gap-4'>
                 <span className='textGrad text-xl uppercase font-semibold'>HIRE CREATIVE TALENTS</span>
                 <h2 className='text-center'>Meet our Creative Designers</h2>

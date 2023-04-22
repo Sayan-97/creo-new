@@ -32,7 +32,8 @@ export default {
         background: '#0A0A0A',
         accent: '#171717',
         textGray: '#9E9E9E',
-        divide: '#474747'
+        divide: '#474747',
+        placeholder: "#C3C3C3"
       },
 
       // Primary Gradient
