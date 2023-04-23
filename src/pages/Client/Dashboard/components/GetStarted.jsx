@@ -6,13 +6,11 @@ import Card4Img from '../../../../assets/images/pages/Card5Img.png'
 
 import { BsArrowRight } from 'react-icons/bs'
 
-const GettingStarted = () => {
+const GetStarted = () => {
     return (
         <div className='md:py-2 lg:py-6 relative'>
             <div className='container flex flex-col items-center gap-4'>
-                <p className='textGrad text-xl uppercase font-semibold'>GETTING STARTED</p>
-                <h2>How it Works</h2>
-                <div className='w-[100px] h-[5px] bg-gradient-to-r from-cyan-400 to-purple-500'></div>
+                <h3>Get Started</h3>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'>
 
@@ -53,9 +51,10 @@ const GettingStarted = () => {
                     </div>
 
                 </div>
+
             </div>
         </div>
     )
 }
 
-export default GettingStarted
+export default GetStarted

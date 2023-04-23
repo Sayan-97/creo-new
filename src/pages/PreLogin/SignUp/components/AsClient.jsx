@@ -1,11 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { toggleUser } from '../../../../store/user/userSlice'
 
 import avatar from '../../../../assets/images/forms/profile1.png'
 
 import { HiPlus } from 'react-icons/hi'
 
 const AsClient = () => {
+
+    const dispatch = useDispatch()
+    const handleSignUpAsClient = () => (
+        dispatch(toggleUser('client'))
+    )
 
     const countries = ['USA', 'UK', 'Australia']
     const cities = ['ABC', 'ABC', 'ABC']
@@ -97,8 +104,8 @@ const AsClient = () => {
 
             {/* Submit */}
             <div className='flex justify-center'>
-                <Link to='/'>
-                    <button className='primary px-5 py-2'>Sign Up</button>
+                <Link to='/client/dashboard'>
+                    <button onClick={handleSignUpAsClient} className='primary px-5 py-2'>Sign Up</button>
                 </Link>
             </div>
 
