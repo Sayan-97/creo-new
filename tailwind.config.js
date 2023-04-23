@@ -31,6 +31,7 @@ export default {
         secondary: '#A514FC',
         background: '#0A0A0A',
         accent: '#171717',
+        accent2: '#272727',
         textGray: '#9E9E9E',
         divide: '#474747',
         placeholder: "#C3C3C3"

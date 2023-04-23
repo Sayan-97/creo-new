@@ -9,7 +9,9 @@ import { FiMenu } from 'react-icons/fi'
 import { IoClose } from 'react-icons/io5'
 import { BiChevronDown } from 'react-icons/bi'
 import { FiSearch } from 'react-icons/fi'
-import { AiOutlineUser } from 'react-icons/ai'
+import userImg from '../assets/images/svg/user.svg'
+import sms from '../assets/images/svg/sms.svg'
+import notification from '../assets/images/svg/notification.svg'
 
 const Header = () => {
 
@@ -65,8 +67,8 @@ const Header = () => {
         {
             label: 'Talent',
             dropdown: [
-                { name: '', link: '/client/freelancer#profile' },
-                { name: '', link: '/user/reports/billing-earning' },
+                { name: 'Hire Developers', link: '/client/freelancer#profile' },
+                { name: 'Hire Designers', link: '/user/reports/billing-earning' },
             ]
         },
         {
@@ -82,8 +84,8 @@ const Header = () => {
 
     const client = [
         {
-            name: '',
-            link: '/client/settings'
+            name: 'Dashboard',
+            link: '/client/dashboard'
         },
         {
             name: 'Log Out',
@@ -128,11 +130,11 @@ const Header = () => {
                                                         >
                                                             <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen min-w-[200px] max-w-max -translate-x-1/2 transform">
                                                                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-20">
-                                                                    <div className="relative bg-white p-2">
+                                                                    <div className="relative bg-accent2 p-2">
                                                                         {
                                                                             item.dropdown.map((dropdownItem, dropdownindex) => (
                                                                                 <Link key={dropdownindex} to={dropdownItem.link}>
-                                                                                    <div className='text-base font-medium text-gray-900 hover:bg-gray-200 rounded-md p-2 transition-all ease-in-out duration-150'>
+                                                                                    <div className='text-base font-medium text-white hover:bg-[#575757] rounded-md p-2 transition-all ease-in-out duration-150'>
                                                                                         {dropdownItem.name}
                                                                                     </div>
                                                                                 </Link>
@@ -158,40 +160,58 @@ const Header = () => {
                                     <input type="search" className='bg-background pl-8 outline-none text-white' placeholder='Search Here'/>
                                 </div>
 
-                                <Popover className='relative'>
-                                    {({ open }) => (
-                                        <>
-                                            <Popover.Button className={`${open ? 'text-[#A334FF]' : 'text-white hover:!text-[#A334FF]'} w-10 h-10 hover:scale-105 transition-all ease-in-out rounded-full text-xl leading-normal flex justify-center items-center`} style={{ background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%) border-box', borderWidth: '2px', borderStyle: 'solid', borderColor: 'transparent' }}>
-                                                <AiOutlineUser />
-                                            </Popover.Button>
-                                            <Transition
-                                                as={Fragment}
-                                                enter="transition ease-out duration-200"
-                                                enterFrom="opacity-0 translate-y-1"
-                                                enterTo="opacity-100 translate-y-0"
-                                                leave="transition ease-in duration-150"
-                                                leaveFrom="opacity-100 translate-y-0"
-                                                leaveTo="opacity-0 translate-y-1"
-                                            >
-                                                <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen min-w-[200px] max-w-max -translate-x-1/2 transform">
-                                                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-20">
-                                                        <div className="relative bg-white p-2">
-                                                            {
-                                                                client.map((item, index) => (
-                                                                    <Link key={index} to={item.link} onClick={item.name === 'Log Out' ? handleLogOut : ''}>
-                                                                        <div className='text-base font-medium text-gray-900 hover:bg-gray-200 rounded-md p-2 transition-all ease-in-out duration-150'>
-                                                                            {item.name}
-                                                                        </div>
-                                                                    </Link>
-                                                                ))
-                                                            }
+                                <div className='flex gap-4'>
+                                    <Link to='/user/messages'>
+                                        <button className='w-10 h-10 hover:scale-105 transition-all ease-in-out rounded-full text-xl leading-normal flex justify-center items-center relative' style={{ background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%) border-box', borderWidth: '2px', borderStyle: 'solid', borderColor: 'transparent' }}>
+                                            <img src={sms} alt="img" />
+                                            <div className='bg-green-400 w-3 h-3 rounded-full absolute -top-0.5 -right-0.5'></div>
+                                            <div className='bg-green-400 w-3 h-3 rounded-full absolute -top-0.5 -right-0.5 animate-ping'></div>
+                                        </button>
+                                    </Link>
+
+                                    <Link to='/user/messages'>
+                                        <button className='w-10 h-10 hover:scale-105 transition-all ease-in-out rounded-full text-xl leading-normal flex justify-center items-center relative' style={{ background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%) border-box', borderWidth: '2px', borderStyle: 'solid', borderColor: 'transparent' }}>
+                                            <img src={notification} alt="img" />
+                                            <div className='bg-green-400 w-3 h-3 rounded-full absolute -top-0.5 -right-0.5'></div>
+                                            <div className='bg-green-400 w-3 h-3 rounded-full absolute -top-0.5 -right-0.5 animate-ping'></div>
+                                        </button>
+                                    </Link>
+
+                                    <Popover className='relative'>
+                                        {({ open }) => (
+                                            <>
+                                                <Popover.Button className={`${open ? 'text-[#A334FF]' : 'text-white hover:!text-[#A334FF]'} w-10 h-10 hover:scale-105 transition-all ease-in-out rounded-full text-xl leading-normal flex justify-center items-center`} style={{ background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%) border-box', borderWidth: '2px', borderStyle: 'solid', borderColor: 'transparent' }}>
+                                                    <img src={userImg} alt="img" />
+                                                </Popover.Button>
+                                                <Transition
+                                                    as={Fragment}
+                                                    enter="transition ease-out duration-200"
+                                                    enterFrom="opacity-0 translate-y-1"
+                                                    enterTo="opacity-100 translate-y-0"
+                                                    leave="transition ease-in duration-150"
+                                                    leaveFrom="opacity-100 translate-y-0"
+                                                    leaveTo="opacity-0 translate-y-1"
+                                                >
+                                                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen min-w-[200px] max-w-max -translate-x-1/2 transform">
+                                                        <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-20">
+                                                            <div className="relative bg-accent2 p-2">
+                                                                {
+                                                                    client.map((item, index) => (
+                                                                        <Link key={index} to={item.link} onClick={item.name === 'Log Out' ? handleLogOut : ''}>
+                                                                            <div className='text-base font-medium text-white hover:bg-[#575757] rounded-md p-2 transition-all ease-in-out duration-150'>
+                                                                                {item.name}
+                                                                            </div>
+                                                                        </Link>
+                                                                    ))
+                                                                }
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </Popover.Panel>
-                                            </Transition>
-                                        </>
-                                    )}
-                                </Popover>
+                                                    </Popover.Panel>
+                                                </Transition>
+                                            </>
+                                        )}
+                                    </Popover>
+                                </div>
                             </div>
                         </>
 
