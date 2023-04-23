@@ -23,7 +23,7 @@ const Footer = () => {
             <div className='md:flex items-center grid justify-items-center max-md:space-y-4'>
                 <img src={Logo} alt="img" className='inline-flex w-24' />
                 <div className='w-full md:flex max-md:space-y-4 items-center justify-between md:pl-12'>
-                    <ul className='max-md:flex justify-center space-x-8'>
+                    <ul className='max-md:grid justify-items-center space-y-6 md:space-x-8'>
                         {preLoginLinks.map((item, index) => {
                             return (
                                 <a key={index} href={item.link}>{item.name}</a>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const SignIn = () => {
     return (
-        <form action="" className='space-y-16'>
+        <form action="" className='w-[30%] space-y-16'>
             <h4 className='text-center'>Log In to <span className='textGrad'>Creo Network</span></h4>
             <div className='grid gap-4 w-[70%] mx-auto'>
                 <div className='grid gap-1'>

@@ -10,7 +10,7 @@ const SignUp = () => {
         <div className='container py-10 grid justify-items-center gap-10'>
             <h4>Join as a <span className='textGrad'>Client</span> or a <span className='textGrad'>Freelancer</span></h4>
 
-            <div className='grid grid-cols-2 gap-10'>
+            <div className='grid md:grid-cols-2 gap-10'>
                 <Link to='/signup/freelancer'>
                     <div className='bg-accent rounded-card px-5 py-8 grid justify-items-center gap-4 cursor-pointer hover:transform hover:scale-[102%]'>
                         <img src={Freelancer} alt="img" className='w-72' />

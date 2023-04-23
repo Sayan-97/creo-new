@@ -57,13 +57,16 @@ p{
 
 /* Forms */
 form{
-    @apply w-[35%] rounded-card bg-accent px-5 py-10 mx-auto;
+    @apply w-11/12 lg:w-[35%] rounded-card bg-accent px-5 py-10 mx-auto;
 }
 input{
     @apply h-10 rounded-button outline-[#A514FC] px-2 text-black text-lg font-medium placeholder:text-placeholder placeholder:text-lg placeholder:font-regular
 }
 select{
     @apply h-10 rounded-button outline-[#A514FC] px-2 text-black;
+}
+textarea{
+    @apply rounded-button outline-[#A514FC] px-2 text-black text-lg font-medium placeholder:text-placeholder placeholder:text-lg placeholder:font-regular p-2
 }
 
 /* BUTTONS */

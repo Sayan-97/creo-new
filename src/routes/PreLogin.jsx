@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { AsFreelancer, Home, SignIn, SignUp } from '../pages/PreLogin'
+import { AsClient, AsFreelancer, Home, SignIn, SignUp } from '../pages/PreLogin'
 
 const PreLogin = () => {
     return (
@@ -14,6 +14,7 @@ const PreLogin = () => {
             {/* SignUp Pages */}
             <Route path='/signup' element={<SignUp />}/>
             <Route path='/signup/freelancer' element={<AsFreelancer />}/>
+            <Route path='/signup/client' element={<AsClient />}/>
         </Routes>
     )
 }
