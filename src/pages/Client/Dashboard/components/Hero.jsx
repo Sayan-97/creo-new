@@ -28,7 +28,7 @@ const Hero = () => {
                 {
                     category.map((item, index) => {
                         return (
-                            <Link to={item.link} key={index}>{item.name}</Link>
+                            <Link className='text-base' to={item.link} key={index}>{item.name}</Link>
                         )
                     })
                 }

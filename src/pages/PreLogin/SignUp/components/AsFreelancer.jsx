@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { useDispatch } from 'react-redux'
+import { toggleUser } from '../../../../store/user/userSlice'
+
 import Profile from '../../../../assets/images/svg/profile.svg'
 import Book from '../../../../assets/images/svg/book.svg'
 import Dollar from '../../../../assets/images/svg/dollar-circle.svg'
@@ -13,6 +16,11 @@ import avatar from '../../../../assets/images/forms/profile1.png'
 import { HiPlus } from 'react-icons/hi'
 
 const AsFreelancer = () => {
+
+    const dispatch = useDispatch()
+    const handleSignUpAsFreelancer = () => (
+        dispatch(toggleUser('freelancer'))
+    )
 
     const countries = ['USA', 'UK', 'Australia']
     const cities = ['ABC', 'ABC', 'ABC']
@@ -246,8 +254,8 @@ const AsFreelancer = () => {
             </div>
 
             <div className='flex justify-center'>
-                <Link to='/'>
-                    <button className='primary px-5 py-2'>Sign Up</button>
+                <Link to='/freelancer/findwork'>
+                    <button onClick={handleSignUpAsFreelancer} className='primary px-5 py-2'>Sign Up</button>
                 </Link>
             </div>
         </form>

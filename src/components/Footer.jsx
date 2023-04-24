@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 // Logo
 import Logo from '../assets/images/logos/creo-logo.svg'
@@ -17,11 +19,15 @@ const Footer = () => {
         { name: 'Why Creo?', link: '#whycreo' },
     ]
 
+    const userType = useSelector((state) => state.user.userType)
+
     return (
-        <div className='space-y-8 py-6 container'>
+        <div className='space-y-8 pt-8 pb-2 container'>
             <hr className='border-divide' />
             <div className='md:flex items-center grid justify-items-center max-md:space-y-4'>
-                <img src={Logo} alt="img" className='inline-flex w-24' />
+                <Link to={`${userType === 'client' ? '/client/dashboard' : userType === 'freelancer' ? '/freelancer/findwork' : '/'}`}>
+                    <img src={Logo} alt="img" className='inline-flex w-20 md:w-24' />
+                </Link>
                 <div className='w-full md:flex max-md:space-y-4 items-center justify-between md:pl-12'>
                     <ul className='max-md:grid justify-items-center space-y-6 md:space-x-8'>
                         {preLoginLinks.map((item, index) => {
