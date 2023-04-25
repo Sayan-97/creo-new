@@ -66,8 +66,8 @@ const Header = () => {
         {
             label: 'Talent',
             dropdown: [
-                { name: 'Hire Developers', link: '/client/freelancer#profile' },
-                { name: 'Hire Designers', link: '/user/reports/billing-earning' },
+                { name: 'Hire Developers', link: '/client/hire-developers' },
+                { name: 'Hire Designers', link: '/client/hire-designers' },
             ]
         },
         {

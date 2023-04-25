@@ -2,6 +2,8 @@ import React from 'react'
 import Filter from '../../../../assets/images/svg/filter.svg'
 import { FiSearch } from 'react-icons/fi'
 
+import save from '../.../../../../../assets/images/pages/saved.png'
+
 const Saved = () => {
   return (
     <div className='py-8 px-4'>
@@ -17,6 +19,12 @@ const Saved = () => {
             Filter
           </button>
         </div>
+      </div>
+
+      <div className='grid justify-items-center py-8 space-y-8'>
+        <img src={save} alt="img" />
+        <h5>You haven’t saved anyone yet</h5>
+        <p>Go to Talent to find all your saves and lists.</p>
       </div>
     </div>
   )

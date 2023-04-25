@@ -2,6 +2,8 @@ import React from 'react'
 import Filter from '../../../../assets/images/svg/filter.svg'
 import { FiSearch } from 'react-icons/fi'
 
+import hire from '../../../../assets/images/pages/paper folder.png'
+
 const MyHires = () => {
   return (
     <div className='py-8 px-4'>
@@ -17,6 +19,12 @@ const MyHires = () => {
             Filter
           </button>
         </div>
+      </div>
+
+      <div className='grid justify-items-center py-8 space-y-8'>
+        <img src={hire} alt="img" />
+        <h5>You haven’t hired anyone yet</h5>
+        <p>Search for freelancers who can help you get work done.</p>
       </div>
     </div>
   )

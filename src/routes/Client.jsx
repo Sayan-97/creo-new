@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Routes, Route } from 'react-router-dom'
-import { Dashboard, Messages, MyJobs, MyProposals, PostJob, Settings } from '../pages/Client'
+import { Dashboard, HireDesigners, HireDevelopers, Messages, MyJobs, MyProposals, PostJob, Settings } from '../pages/Client'
 
 const Client = () => {
     return (
@@ -17,6 +17,12 @@ const Client = () => {
 
             <Route path='/client/jobs/my-jobs' element={<MyJobs />}/>
             <Route path='/client/jobs/my-proposals' element={<MyProposals />}/>
+
+            {/* Hire Designers */}
+            <Route path='/client/hire-designers' element={<HireDesigners />}/>
+
+            {/* Hire Developers */}
+            <Route path='/client/hire-developers' element={<HireDevelopers />}/>
 
             {/* Settings */}
             <Route path='/client/settings' element={<Settings />}/>

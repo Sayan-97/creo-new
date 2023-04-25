@@ -5,6 +5,8 @@ import PostJob from "./PostJob";
 import MyJobs from "./MyJobs/MyJobs";
 import MyProposals from "./MyProposals/MyProposals";
 import Settings from "./Settings/Settings";
+import HireDesigners from "./HireDesigners";
+import HireDevelopers from "./HireDevelopers";
 
 export {
     Dashboard,
@@ -12,5 +14,7 @@ export {
     PostJob,
     MyJobs,
     MyProposals,
-    Settings
+    Settings,
+    HireDesigners,
+    HireDevelopers
 }
