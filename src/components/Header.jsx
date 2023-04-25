@@ -86,7 +86,6 @@ const Header = () => {
         {
             label: 'Find Work',
             dropdown: [
-                { name: 'Post a Job', link: '/client/jobs/post-job' },
                 { name: 'My Proposals', link: '/freelancer/my-proposals' },
                 { name: 'Profile', link: '/freelancer/profile' },
             ]
@@ -95,8 +94,7 @@ const Header = () => {
             label: 'My Jobs',
             dropdown: [
                 { name: 'My Jobs', link: '/freelancer/my-jobs' },
-                { name: 'Hire Developers', link: '/client/freelancer#profile' },
-                { name: 'Hire Designers', link: '/user/reports/billing-earning' },
+                { name: 'All Contracts', link: '/freelancer/all-contracts' },
                 { name: 'Work Diary', link: '/freelancer/work-diary' },
             ]
         },

@@ -9,6 +9,8 @@ import Reports from "./Reports";
 import ConnectHistory from "./ConnectHistory";
 import TransactionHistory from "./TransactionHistory";
 import WorkDiary from "./WorkDiary";
+import AllContracts from "./AllContracts";
+import Settings from "./Settings/Settings";
 
 export {
     FindWork,
@@ -21,5 +23,7 @@ export {
     Reports,
     ConnectHistory,
     TransactionHistory,
-    WorkDiary
+    WorkDiary,
+    AllContracts,
+    Settings
 }
