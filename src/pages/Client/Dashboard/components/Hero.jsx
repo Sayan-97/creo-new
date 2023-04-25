@@ -10,29 +10,8 @@ import { RiMailSendLine } from 'react-icons/ri'
 
 const Hero = () => {
 
-    const category = [
-        { name: 'Game Development', link: '/' },
-        { name: 'Game Designer', link: '/' },
-        { name: 'Blockchain Developer', link: '/' },
-        { name: '3D Designer', link: '/' },
-        { name: 'UI/UX Designer', link: '/' },
-        { name: 'Marketing', link: '/' },
-        { name: 'Sound Designer', link: '/' },
-        { name: 'Character Creator', link: '/' },
-        { name: 'Game Content Writer', link: '/' },
-    ]
-
     return (
         <div className='w-full flex flex-col items-center justify-center'>
-            <div className='w-full bg-[#171717] py-5 flex max-lg:flex-wrap max-lg:gap-2 px-4 lg:items-center lg:justify-between lg:px-28'>
-                {
-                    category.map((item, index) => {
-                        return (
-                            <Link className='text-base' to={item.link} key={index}>{item.name}</Link>
-                        )
-                    })
-                }
-            </div>
             <div className='container grid grid-cols-8 gap-4 py-10'>
                 <div className='col-span-8 lg:col-span-6 bg-[#171717] rounded-xl px-5 py-5 relative z-10 flex'>
 

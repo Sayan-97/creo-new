@@ -14,7 +14,7 @@ const MyProposals = () => {
                 {/* title */}
                 <div className='grid grid-cols-12 mb-4'>
                     <div className='col-span-12 lg:col-span-3'>
-                        <h5 >My Jobs</h5>
+                        <h5 >My Proposals</h5>
                     </div>
                     <div className='hidden lg:block col-span-9'>
                         <h5 >{selectedView}</h5>

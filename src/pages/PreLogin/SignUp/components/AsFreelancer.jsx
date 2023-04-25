@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import { useDispatch } from 'react-redux'
@@ -15,6 +15,8 @@ import avatar from '../../../../assets/images/forms/profile1.png'
 
 import { HiPlus } from 'react-icons/hi'
 
+import { WorkExpModal } from '../../../../components/Modals'
+
 const AsFreelancer = () => {
 
     const dispatch = useDispatch()
@@ -26,6 +28,12 @@ const AsFreelancer = () => {
     const cities = ['ABC', 'ABC', 'ABC']
     const language = ['English', 'Dutch', 'Spanish']
     const proficiency = ['Beginner', 'Intermediate', 'Advanced']
+
+    const [showExpModal, setShowExpModal] = useState(false)
+
+    const setExpModal = () => (
+        setShowExpModal(!showExpModal)
+    )
 
     return (
         <form action="" className='space-y-6'>
@@ -190,10 +198,10 @@ const AsFreelancer = () => {
                     <p>Add your work experience here with your most recent position</p>
 
                     <button type='button' onClick={() => setExpModal()} className='primary px-5 py-2 flex items-center justify-center gap-1'> <HiPlus className='text-lg' /> Add Work Experience</button>
-                    {/* <WorkExpModal
-                            show={showExpModal}
-                            setExpModal={setExpModal}
-                        /> */}
+                    <WorkExpModal
+                        show={showExpModal}
+                        setExpModal={setExpModal}
+                    />
 
                 </div>
             </div>

@@ -56,7 +56,7 @@ const MyJobs = () => {
                             {
                                 selectedView === 'All Job Posts'
                                     ? <AllJobPosts />
-                                    : selectedView === 'Invited Freelancer'
+                                    : selectedView === 'Invited Freelancers'
                                         ? <InvitedFreelancers />
                                         : selectedView === 'My Hires'
                                             ? <MyHires />
