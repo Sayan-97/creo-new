@@ -26,6 +26,10 @@
     @apply w-11/12 lg:w-[80%] 3xl:w-[70%] mx-auto;
 }
 
+.container-small{
+    @apply w-11/12 lg:w-[65%] 3xl:w-[60%] mx-auto;
+}
+
 /* LINKS */
 Link,
 a{
@@ -57,7 +61,7 @@ p{
 
 /* Forms */
 form{
-    @apply w-11/12 lg:w-[40%] 3xl:w-[35%] rounded-card bg-accent px-5 py-10 mx-auto;
+    @apply w-11/12 lg:w-[45%] 3xl:w-[40%] rounded-card bg-accent px-5 py-10 mx-auto;
 }
 input{
     @apply h-10 rounded-button outline-[#A514FC] px-2 text-black text-lg font-medium placeholder:text-placeholder placeholder:text-lg placeholder:font-regular

@@ -80,7 +80,7 @@ const Apply = () => {
                 {/* Right Side */}
                 <div className='w-full bg-[#171717] col-span-1 py-5 rounded-lg space-y-4'>
                     <div className='grid gap-4 px-5 w-full'>
-                        <Link to='/user/findwork/submit-proposal'>
+                        <Link to='/freelancer/findwork/submit-proposal'>
                             <button className='w-full bg-gradient-to-r from-cyan-400 to-violet-500 rounded-lg p-[1px]'>
                                 <p className='px-4 py-2 bg-gradient-to-r from-cyan-400 to-violet-500 rounded-lg'>Apply</p>
                             </button>

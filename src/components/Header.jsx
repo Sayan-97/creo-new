@@ -94,17 +94,19 @@ const Header = () => {
         {
             label: 'My Jobs',
             dropdown: [
+                { name: 'My Jobs', link: '/freelancer/my-jobs' },
                 { name: 'Hire Developers', link: '/client/freelancer#profile' },
                 { name: 'Hire Designers', link: '/user/reports/billing-earning' },
+                { name: 'Work Diary', link: '/freelancer/work-diary' },
             ]
         },
         {
             label: 'More',
             dropdown: [
-                { name: 'Weekly Summery', link: '/client/reports/weekly-summery' },
-                { name: 'Transaction History', link: '/client/reports/transaction-history' },
-                { name: 'Timesheet', link: '/client/reports/timesheet' },
-                { name: '', link: '/client/reports/wallet' }
+                { name: 'Overview', link: '/freelancer/overview' },
+                { name: 'Reports', link: '/freelancer/reports' },
+                { name: 'Connect History', link: '/freelancer/connect-history' },
+                { name: 'Transaction History', link: '/freelancer/transaction-history' }
             ]
         },
     ];
