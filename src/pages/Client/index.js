@@ -7,6 +7,10 @@ import MyProposals from "./MyProposals/MyProposals";
 import Settings from "./Settings/Settings";
 import HireDesigners from "./HireDesigners";
 import HireDevelopers from "./HireDevelopers";
+import JobDetails from "./JobDetails";
+import Success from "./Success";
+import TransactionHistory from "./TransactionHistory";
+import Timesheet from "./Timesheet";
 
 export {
     Dashboard,
@@ -16,5 +20,9 @@ export {
     MyProposals,
     Settings,
     HireDesigners,
-    HireDevelopers
+    HireDevelopers,
+    JobDetails,
+    Success,
+    TransactionHistory,
+    Timesheet
 }

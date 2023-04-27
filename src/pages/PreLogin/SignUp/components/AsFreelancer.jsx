@@ -44,6 +44,9 @@ const AsFreelancer = () => {
         setShowCrtModal(!showCrtModal)
     )
 
+    const skills = ['UI/UX Designing', 'Web Design', ' Graphic Design', 'Mobile App Design', 'UX Designing', 'Figma']
+    const category = ['Development', 'Designing', 'DevOps', 'Architecture', 'Visual Designing']
+
     return (
         <form action="" className='space-y-6'>
             <div className='grid justify-items-center'>
@@ -254,6 +257,62 @@ const AsFreelancer = () => {
                         setCrtModal={setCrtModal}
                     />
 
+                </div>
+            </div>
+
+            {/* Skills */}
+            <div className='bg-gradient p-[1px] rounded-card'>
+                <div className='bg-accent px-5 py-5 rounded-card space-y-4'>
+                    <div className='flex items-end gap-2'>
+                        <h6>Skills</h6>
+                        <span className='required'>Required</span>
+                    </div>
+
+                    <div className='grid gap-1'>
+                        <label htmlFor="skills">Add your skills here</label>
+                        <input type="text" id='skills' placeholder='Add your Skills' />
+                    </div>
+
+                    <div className='space-y-3'>
+                        <p>Suggestions</p>
+                        <div className='flex flex-wrap gap-2'>
+                            {skills.map((item, index) => {
+                                return(
+                                    <button key={index} className='primary p-[1px]'>
+                                        <p className='bg-accent rounded-button flex items-center px-4 h-11'><HiPlus /> {item}</p>
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Category */}
+            <div className='bg-gradient p-[1px] rounded-card'>
+                <div className='bg-accent px-5 py-5 rounded-card space-y-4'>
+                    <div className='flex items-end gap-2'>
+                        <h6>Category</h6>
+                        <span className='required'>Required</span>
+                    </div>
+
+                    <div className='grid gap-1'>
+                        <label htmlFor="category">Add your category that defines your skills</label>
+                        <input type="text" id='category' placeholder='Add your category' />
+                    </div>
+
+                    <div className='space-y-3'>
+                        <p>Suggestions</p>
+                        <div className='flex flex-wrap gap-2'>
+                            {category.map((item, index) => {
+                                return (
+                                    <button key={index} className='primary p-[1px]'>
+                                        <p className='bg-accent rounded-button flex items-center px-4 h-11'><HiPlus /> {item}</p>
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
                 </div>
             </div>
 

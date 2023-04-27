@@ -74,9 +74,8 @@ const Header = () => {
             label: 'Reports',
             dropdown: [
                 { name: 'Weekly Summery', link: '/client/reports/weekly-summery' },
-                { name: 'Transaction History', link: '/client/reports/transaction-history' },
-                { name: 'Timesheet', link: '/client/reports/timesheet' },
-                { name: '', link: '/client/reports/wallet' }
+                { name: 'Transaction History', link: '/client/transaction-history' },
+                { name: 'Timesheet', link: '/client/timesheet' },
             ]
         },
     ];
