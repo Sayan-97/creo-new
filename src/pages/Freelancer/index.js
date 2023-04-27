@@ -11,6 +11,9 @@ import TransactionHistory from "./TransactionHistory";
 import WorkDiary from "./WorkDiary";
 import AllContracts from "./AllContracts";
 import Settings from "./Settings/Settings";
+import Messages from "./Messages/Messages";
+import BuyConnects from "./BuyConnects";
+import MembershipPlans from "./MembershipPlans";
 
 export {
     FindWork,
@@ -25,5 +28,8 @@ export {
     TransactionHistory,
     WorkDiary,
     AllContracts,
+    Messages,
+    MembershipPlans,
+    BuyConnects,
     Settings
 }

@@ -317,7 +317,7 @@ const Header = () => {
                                 </div>
 
                                 <div className='flex gap-4'>
-                                    <Link to='/client/messages'>
+                                    <Link to='/freelancer/messages'>
                                         <button className='w-10 h-10 hover:scale-105 transition-all ease-in-out rounded-full text-xl leading-normal flex justify-center items-center relative' style={{ background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%) border-box', borderWidth: '2px', borderStyle: 'solid', borderColor: 'transparent' }}>
                                             <img src={sms} alt="img" />
                                             <div className='bg-green-400 w-3 h-3 rounded-full absolute -top-0.5 -right-0.5'></div>
@@ -571,7 +571,7 @@ const Header = () => {
                                         </div>
 
                                         <div className='flex justify-center gap-4'>
-                                            <Link to='/client/messages'>
+                                            <Link to='/freelancer/messages'>
                                                 <button className='w-10 h-10 hover:scale-105 transition-all ease-in-out rounded-full text-xl leading-normal flex justify-center items-center relative' style={{ background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%) border-box', borderWidth: '2px', borderStyle: 'solid', borderColor: 'transparent' }}>
                                                     <img src={sms} alt="img" />
                                                     <div className='bg-green-400 w-3 h-3 rounded-full absolute -top-0.5 -right-0.5'></div>

@@ -34,7 +34,7 @@ const EducationModal = ({ show, setEdModal }) => {
 
     return show ? ReactDOM.createPortal(
         <React.Fragment>
-            <div className='fixed top-0 left-0 w-full h-full z-20 pt-32 pb-5 overflow-y-scroll hide-scrollbar' style={{ background: 'rgba(0, 0, 0, 0.52)' }}>
+            <div className='fixed top-0 left-0 w-full h-full z-20 pt-8 pb-8 overflow-y-scroll hide-scrollbar' style={{ background: 'rgba(0, 0, 0, 0.52)' }}>
                 <div ref={modalRef} className='w-11/12 lg:w-[50%] 3xl:w-[40%] py-10 px-10 mx-auto space-y-4 bg-[#171717] rounded-xl text-white'>
 
                     {/* Head */}
@@ -43,14 +43,13 @@ const EducationModal = ({ show, setEdModal }) => {
                         <RxCrossCircled onClick={setEdModal} className='text-xl cursor-pointer hover:rotate-90 transition-all ease-in-out duration-300' />
                     </div>
 
-                    <form className='space-y-5'>
+                    <form className='w-full space-y-5'>
                         {/* Title */}
                         <div class="w-full mb-2">
                             <label class="block text-white text-md font-medium mb-2" for="title">
                                 Title
                             </label>
                             <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Enter your Title" />
-                            <p class="text-red-500 text-xs italic">Please enter your title</p>
                         </div>
 
                         {/* Company */}
@@ -59,7 +58,6 @@ const EducationModal = ({ show, setEdModal }) => {
                                 Company
                             </label>
                             <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="company" type="text" placeholder="Enter your Company Name" />
-                            <p class="text-red-500 text-xs italic">Please enter your Company Name</p>
                         </div>
 
                         <div>
@@ -70,7 +68,6 @@ const EducationModal = ({ show, setEdModal }) => {
                                         Location
                                     </label>
                                     <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="location" type="text" placeholder="Enter your Location" />
-                                    <p class="text-red-500 text-xs italic">Please enter your Location</p>
                                 </div>
 
                                 {/* City */}
@@ -79,13 +76,12 @@ const EducationModal = ({ show, setEdModal }) => {
                                         City
                                     </label>
                                     <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="city" type="text" placeholder="Enter your City" />
-                                    <p class="text-red-500 text-xs italic">Please enter your City</p>
                                 </div>
 
                             </div>
 
-                            <div className='flex gap-2'>
-                                <input type="checkbox" />
+                            <div className='flex items-center gap-2'>
+                                <input type="checkbox" className='h-full' />
                                 <p>I am currently working here</p>
                             </div>
                         </div>
@@ -114,7 +110,6 @@ const EducationModal = ({ show, setEdModal }) => {
                                         }
                                     </select>
                                 </div>
-                                <p className='absolute -bottom-5 right-1 text-red-600 text-xs lg:text-sm text-right'>error</p>
                             </div>
                             {/* end date */}
                             <div className='w-full relative col-span-2 lg:col-span-1 text-black'>
@@ -139,7 +134,6 @@ const EducationModal = ({ show, setEdModal }) => {
                                         }
                                     </select>
                                 </div>
-                                <p className='absolute -bottom-5 right-1 text-red-600 text-xs lg:text-sm text-right'>error</p>
                             </div>
                         </div>
 
@@ -149,7 +143,6 @@ const EducationModal = ({ show, setEdModal }) => {
                                 Description
                             </label>
                             <textarea class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-40" id="Description" type="text" placeholder="Enter your Description" />
-                            <p class="text-red-500 text-xs italic">Please enter your Description</p>
                         </div>
 
                         <div className='w-full flex justify-end'>

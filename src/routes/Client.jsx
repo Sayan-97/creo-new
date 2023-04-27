@@ -24,6 +24,9 @@ const Client = () => {
             {/* Hire Developers */}
             <Route path='/client/hire-developers' element={<HireDevelopers />}/>
 
+            {/* Messages */}
+            <Route path='/client/messages' element={<Messages />} />
+
             {/* Settings */}
             <Route path='/client/settings' element={<Settings />}/>
         </Routes>

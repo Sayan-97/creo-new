@@ -10,7 +10,7 @@ const MembershipAndConnects = () => {
                 <p className='text-white text-sm md:text-base font-medium'>Current Plan : <span className='font-semibold'>Freelancer Basic</span></p>
                 {/* go to membership plans */}
                 <div>
-                    <Link to='/user/membership-plans'>
+                    <Link to='/freelancer/membership-plans'>
                         <div className='w-max flex items-center bg-gradient-to-r from-cyan-400 to-violet-500 text-white text-sm lg:text-base font-semibold capitalize px-4 py-2 rounded-lg shadow hover:scale-105 transition-all ease-in-out duration-200'>
                             View or Edit Membership Plans
                         </div>
@@ -24,7 +24,7 @@ const MembershipAndConnects = () => {
                 <p className='text-white text-sm md:text-base font-medium'>20</p>
                 {/* button */}
                 <div className='flex items-center space-x-4'>
-                    <Link >
+                    <Link to='/freelancer/buy-connects'>
                         <div className='flex items-center bg-gradient-to-r from-cyan-400 to-violet-500 text-white text-sm lg:text-base font-semibold capitalize px-4 py-2 rounded-lg shadow hover:scale-105 transition-all ease-in-out duration-200'>
                             Buy Connects
                         </div>

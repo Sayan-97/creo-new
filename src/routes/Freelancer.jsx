@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import { AllContracts, Apply, ConnectHistory, FindWork, MyJobs, MyProposals, Overview, Profile, Reports, Settings, SubmitProposal, TransactionHistory, WorkDiary } from '../pages/Freelancer'
+import { AllContracts, Apply, BuyConnects, ConnectHistory, FindWork, MembershipPlans, Messages, MyJobs, MyProposals, Overview, Profile, Reports, Settings, SubmitProposal, TransactionHistory, WorkDiary } from '../pages/Freelancer'
 
 const Freelancer = () => {
     return (
@@ -37,8 +37,17 @@ const Freelancer = () => {
             {/* All Contracts */}
             <Route path='/freelancer/all-contracts' element={<AllContracts />}/>
 
+            {/* Messages */}
+            <Route path='/freelancer/messages' element={<Messages />}/>
+
             {/* Settings */}
             <Route path='/freelancer/settings' element={<Settings />}/>
+
+            {/* Membership Plans */}
+            <Route path='/freelancer/membership-plans' element={<MembershipPlans />}/>
+
+            {/* Buy Connects */}
+            <Route path='/freelancer/buy-connects' element={<BuyConnects />}/>
         </Routes>
     )
 }

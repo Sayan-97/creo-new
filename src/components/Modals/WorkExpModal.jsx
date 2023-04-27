@@ -50,7 +50,6 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                 Title
                             </label>
                             <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Enter your Title" />
-                            <p class="text-red-500 text-xs italic">Please enter your title</p>
                         </div>
 
                         {/* Company */}
@@ -59,7 +58,6 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                 Company
                             </label>
                             <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="company" type="text" placeholder="Enter your Company Name" />
-                            <p class="text-red-500 text-xs italic">Please enter your Company Name</p>
                         </div>
 
                         <div>
@@ -70,7 +68,6 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                         Location
                                     </label>
                                     <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="location" type="text" placeholder="Enter your Location" />
-                                    <p class="text-red-500 text-xs italic">Please enter your Location</p>
                                 </div>
 
                                 {/* City */}
@@ -79,13 +76,12 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                         City
                                     </label>
                                     <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline" id="city" type="text" placeholder="Enter your City" />
-                                    <p class="text-red-500 text-xs italic">Please enter your City</p>
                                 </div>
 
                             </div>
 
-                            <div className='flex gap-2'>
-                                <input type="checkbox" />
+                            <div className='flex items-center gap-2'>
+                                <input type="checkbox" className='h-full'/>
                                 <p>I am currently working here</p>
                             </div>
                         </div>
@@ -114,7 +110,6 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                         }
                                     </select>
                                 </div>
-                                <p className='absolute -bottom-5 right-1 text-red-600 text-xs lg:text-sm text-right'>error</p>
                             </div>
                             {/* end date */}
                             <div className='w-full relative col-span-2 lg:col-span-1 text-black'>
@@ -139,7 +134,6 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                         }
                                     </select>
                                 </div>
-                                <p className='absolute -bottom-5 right-1 text-red-600 text-xs lg:text-sm text-right'>error</p>
                             </div>
                         </div>
 
@@ -149,7 +143,6 @@ const WorkExpModal = ({ show, setExpModal }) => {
                                 Description
                             </label>
                             <textarea class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-40" id="Description" type="text" placeholder="Enter your Description" />
-                            <p class="text-red-500 text-xs italic">Please enter your Description</p>
                         </div>
 
                         <div className='w-full flex justify-end'>

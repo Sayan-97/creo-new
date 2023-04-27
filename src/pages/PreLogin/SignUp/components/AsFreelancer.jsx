@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useDispatch } from 'react-redux'
@@ -15,7 +15,7 @@ import avatar from '../../../../assets/images/forms/profile1.png'
 
 import { HiPlus } from 'react-icons/hi'
 
-import { WorkExpModal } from '../../../../components/Modals'
+import { WorkExpModal, EducationModal, AddCertificationsModal } from '../../../../components/Modals'
 
 const AsFreelancer = () => {
 
@@ -30,9 +30,18 @@ const AsFreelancer = () => {
     const proficiency = ['Beginner', 'Intermediate', 'Advanced']
 
     const [showExpModal, setShowExpModal] = useState(false)
-
     const setExpModal = () => (
         setShowExpModal(!showExpModal)
+    )
+
+    const [showEdModal, setShowEdModal] = useState(false)
+    const setEdModal = () => (
+        setShowEdModal(!showEdModal)
+    )
+
+    const [showCrtModal, setShowCrtModal] = useState(false)
+    const setCrtModal = () => (
+        setShowCrtModal(!showCrtModal)
     )
 
     return (
@@ -218,11 +227,11 @@ const AsFreelancer = () => {
 
                     <p>Add your latest Education Qualifications here</p>
 
-                    <button type='button' onClick={() => setExpModal()} className='primary px-5 py-2 flex items-center justify-center gap-1'> <HiPlus className='text-lg' /> Add Education</button>
-                    {/* <WorkExpModal
-                            show={showExpModal}
-                            setExpModal={setExpModal}
-                        /> */}
+                    <button type='button' onClick={() => setEdModal()} className='primary px-5 py-2 flex items-center justify-center gap-1'> <HiPlus className='text-lg' /> Add Education</button>
+                    <EducationModal
+                        show={showEdModal}
+                        setEdModal={setEdModal}
+                    />
 
                 </div>
             </div>
@@ -239,11 +248,11 @@ const AsFreelancer = () => {
 
                     <p>Add a category that defines your skills</p>
 
-                    <button type='button' onClick={() => setExpModal()} className='primary px-5 py-2 flex items-center justify-center gap-1'> <HiPlus className='text-lg' /> Add Certifications</button>
-                    {/* <WorkExpModal
-                            show={showExpModal}
-                            setExpModal={setExpModal}
-                        /> */}
+                    <button type='button' onClick={() => setCrtModal()} className='primary px-5 py-2 flex items-center justify-center gap-1'> <HiPlus className='text-lg' /> Add Certifications</button>
+                    <AddCertificationsModal
+                        show={showCrtModal}
+                        setCrtModal={setCrtModal}
+                    />
 
                 </div>
             </div>
