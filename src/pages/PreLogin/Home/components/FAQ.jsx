@@ -7,28 +7,36 @@ const FAQ = () => {
 
     const faq = [
         {
-            qus: 'What is Material Tailwind?',
-            ans: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus ?'
+            qus: 'What is Creo Network?',
+            ans: 'Creo Network is a blockchain-based freelancer marketplace that leverages AI algorithms to match freelancers with clients, and vice versa.'
         },
         {
-            qus: 'What is Material Tailwind?',
-            ans: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus ?'
+            qus: 'How does Creo Network ensure security?',
+            ans: 'Creo Network uses blockchain technology to ensure secure transactions, and all user data is encrypted and stored securely.'
         },
         {
-            qus: 'What is Material Tailwind?',
-            ans: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus ?'
+            qus: 'How does the AI match-making algorithm work?',
+            ans: 'The AI match-making algorithm takes into account factors such as skills, experience, and job requirements to connect freelancers with the most suitable job opportunities, and clients with the best candidates for their projects.'
         },
         {
-            qus: 'What is Material Tailwind?',
-            ans: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus ?'
+            qus: 'What types of jobs are available on Creo Network?',
+            ans: 'Creo Network offers a wide range of freelance jobs across various industries, including graphic design, writing, programming, and more.'
         },
         {
-            qus: 'What is Material Tailwind?',
-            ans: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus ?'
+            qus: 'How do I get paid for my work on Creo Network?',
+            ans: 'All transactions on Creo Network are conducted using cryptocurrency, which is automatically deposited into your linked wallet upon project completion.'
         },
         {
-            qus: 'What is Material Tailwind?',
-            ans: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus ?'
+            qus: 'How do I create an account on Creo Network?',
+            ans: 'Simply visit the Creo Network website and click "Sign Up" to create an account as either a freelancer or a client.'
+        },
+        {
+            qus: 'What fees does Creo Network charge?',
+            ans: 'Creo Network charges a small transaction fee for each project completed on the platform, which is automatically deducted from the total payment.'
+        },
+        {
+            qus: 'How do I contact support on Creo Network?',
+            ans: 'For any support inquiries, simply navigate to the "Contact Us" page on the Creo Network website and fill out the form provided.'
         },
     ]
 

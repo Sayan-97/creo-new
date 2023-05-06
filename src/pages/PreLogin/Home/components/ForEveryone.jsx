@@ -14,7 +14,7 @@ const ForEveryone = () => {
                 <p className='textGrad text-xl uppercase font-semibold'>For everyone</p>
                 <h2 className='text-center'>Why Choose Creo</h2>
                 <div className='w-[100px] h-[5px] bg-gradient-to-r from-cyan-400 to-purple-500'></div>
-                <p className='lg:w-[70%]'>Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis. Nisl malesuada scelerisque orci sed nunc pellentesque urna enim. </p>
+                <p className='lg:w-[70%] text-center'>If you're looking for a trustworthy and efficient freelance marketplace, Creo Network is the platform for you. With our use of blockchain technology and AI algorithms, we ensure secure transactions and the perfect match for freelancers and employers.</p>
 
                 <div className='flex gap-5'>
                     <button className='primary w-36 h-14'>Find Work</button>

@@ -40,10 +40,10 @@ const TheFuture = () => {
     )
 
     const Array = [
-        { title: 'Powered by Blockchain', icon: BlockchainSvg, desc: 'Discover the revolutionary potential of blockchain technology as it powers our platform, transforming the Experience.' },
-        { title: 'Unleashing Innovation', icon: AiSvg, desc: 'Experience the game-changing fusion of AI and blockchain technology to drive innovation in the gaming industry.' },
-        { title: 'Gamers Paradise', icon: ControllerSvg, desc: 'Indulge in a one-of-a-kind gamelancing experience with exclusive features for game developers and designers.' },
-        { title: 'Your Talents, Your Rewards', icon: TetherSvg, desc: 'Work your magic and achieve milestones , and have the chance to turn your freelancer profile into a valuable NFT, unlocking exciting opportunities for recognition and rewards.' }
+        { title: 'Unlocking the Future: Powered by Blockchain!', icon: BlockchainSvg, desc: 'Discover the revolutionary potential of blockchain technology as it powers our platform, transforming the way we connect, collaborate, and create in the world of game development.' },
+        { title: 'Unleashing Innovation: The Synergy of AI and Blockchain!', icon: AiSvg, desc: 'Experience the game-changing fusion of artificial intelligence and blockchain technology as our platform harnesses their combined potential to drive unprecedented innovation in the gaming industry.' },
+        { title: 'Gamers Paradise: Exclusive Features Await!', icon: ControllerSvg, desc: 'Indulge in a one-of-a-kind gamelancing experience with our platforms exclusive features, tailor- made for passionate game developers and designers seeking unparalleled opportunities for creativity and collaboration.' },
+        { title: 'Your Talents, Your Rewards: Work and Shine!', icon: TetherSvg, desc: 'As you work your magic and achieve milestones on our platform, you will have the chance to turn your freelancer profile into a valuable NFT(Non- Fungible Token) and earn reward points, unlocking exciting opportunities for recognition and rewards.' }
     ]
 
     return (
@@ -73,7 +73,7 @@ const TheFuture = () => {
 
                 <div className='relative col-span-12 lg:col-span-6 z-10'>
                     <div className='absolute top-[20%] right-[18%] w-[60%] h-[60%] z-[-1] rounded-full' style={{ background: 'linear-gradient(96.99deg, #15DBFF 0%, #A514FC 104.31%)', opacity: 0.8, filter: 'blur(167px)', mixBlendMode: 'screen' }}></div>
-                    <img src={Image} alt='Enterprise' className='w-full sm:w-11/12 lg:w-full h-auto mt-10' />
+                    <img src={Image} alt='Enterprise' className='w-full sm:w-11/12 lg:w-full h-auto lg:mt-32' />
                 </div>
             </div>
         </div>

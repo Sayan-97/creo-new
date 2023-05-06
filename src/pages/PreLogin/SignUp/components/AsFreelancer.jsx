@@ -76,6 +76,7 @@ const AsFreelancer = () => {
                         <div className='grid gap-1'>
                             <label htmlFor="username">Username</label>
                             <input type="text" id='username' placeholder='Enter your username' />
+                            <input type="week" />
                         </div>
 
                         {/* Profile Title */}

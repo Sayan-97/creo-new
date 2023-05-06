@@ -77,7 +77,7 @@ const ExploreProjects = () => {
 
                 <div className='space-y-4 grid justify-items-center'>
                     <span className='textGrad text-xl uppercase font-semibold'>Explore Projects</span>
-                    <h2 className='md:w-[80%] text-center'>Meet Our Game Dev Experts!</h2>
+                    <h2 className='md:w-[80%] text-center'>{activeList === 'DEVELOPERS' ? 'Meet Our Game Dev Experts!' : 'Meet Our Game Design Experts!'}</h2>
                     <div className='bg-gradient w-20 h-[5px]'></div>
                 </div>
 

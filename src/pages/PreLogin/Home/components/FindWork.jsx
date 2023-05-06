@@ -39,10 +39,10 @@ const FindWork = () => {
     )
 
     const Array = [
-        { title: 'Blockchain Developer', icon: BlockchainSvg, desc: 'Unleash your blockchain expertise to revolutionize the future of game development, opportunities to showcase your skills.' },
-        { title: 'Game Developer', icon: AiSvg, desc: 'Harness the Power of Cutting-Edge Technologies to Collaborate, Create, and Thrive in the Dynamic World of Game Development!' },
-        { title: 'Game Designer', icon: TetherSvg, desc: 'Unleash Your Creativity With the Power of Cutting-Edge Technologies to Collaborate with Fellow Designers, and Shape the Future of Gaming' },
-        { title: 'Game Strategist', icon: BreifcaseSvg, desc: 'Plan, Optimize, and Innovate the Next Generation of Games, Collaborate with Industry Experts, and Make Your Mark in the Gaming Industry!' }
+        { title: 'Blockchain Developer', icon: BlockchainSvg, desc: 'Join our Creo Network and unleash your blockchain expertise to revolutionize the future of game development, with exciting opportunities to showcase your skills, connect with industry leaders, and shape the gaming landscape like never before!' },
+        { title: 'Game Developer', icon: AiSvg, desc: 'Unlock New Horizons: Join our Game Developer Web App and Harness the Power of Blockchain, AI, and other Cutting-Edge Technologies to Collaborate, Create, and Thrive in the Dynamic World of Game Development!' },
+        { title: 'Game Designer', icon: TetherSvg, desc: 'Unleash Your Creativity: Join our Web App for Game Designers and Harness the Power of Blockchain, AI, and Cutting-Edge Technologies to Bring Your Vision to Life, Collaborate with Fellow Designers, and Shape the Future of Gaming' },
+        { title: 'Game Strategist', icon: BreifcaseSvg, desc: 'Strategize the Future of Gaming: Join our Web App for Game Strategists and Utilize the Power of Blockchain, AI, and other Cutting-Edge Technologies to Plan, Optimize, and Innovate the Next Generation of Games, Collaborate with Industry Experts, and Make Your Mark in the Gaming Industry!' }
     ]
 
     return (
@@ -51,7 +51,7 @@ const FindWork = () => {
             <div className='container lg:grid grid-cols-12 gap-[0px] lg:gap-[80px] space-y-10 lg:space-y-0'>
                 <div className='relative col-span-12 lg:col-span-6 z-10'>
                     <div className='absolute top-[10%] left-[2%] w-[90%] h-[90%] z-[-1] rounded-full' style={{ background: 'linear-gradient(270.35deg, #4031F5 0.26%, #C053B0 99.68%)', opacity: 0.55, filter: 'blur(247px)', mixBlendMode: 'screen' }}></div>
-                    <img src={EnterpriseImage} alt='Enterprise' className='w-full sm:w-9/12 lg:w-full h-auto mx-auto' />
+                    <img src={EnterpriseImage} alt='Enterprise' className='w-full sm:w-9/12 lg:w-full h-auto mx-auto lg:mt-32' />
                 </div>
 
                 <div className='col-span-12 lg:col-span-6 space-y-4'>
