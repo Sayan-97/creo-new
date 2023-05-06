@@ -31,11 +31,9 @@ const TheFuture = () => {
         </svg>
     )
 
-    const TetherSvg = () => (
+    const FlashSvg = () => (
         <svg width="35" height="35" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.5625 6.97916H34.4375C36.6458 6.97916 39.25 8.58332 40.2291 10.5625L45.2291 20.6042C46.4375 23.0208 45.7708 26.4583 43.7916 28.2708L29.3541 41.375C26.9583 43.5417 23.0625 43.5417 20.6666 41.375L6.22913 28.2708C4.22913 26.4583 3.5833 23.0208 4.79163 20.6042L9.79163 10.5625C10.75 8.58332 13.3541 6.97916 15.5625 6.97916Z" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M25 30.2083V17.7083" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M16.6666 17.7083H33.3333" stroke="white" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12.6876 27.6667H19.1251V42.6667C19.1251 46.1667 21.0209 46.875 23.3334 44.25L39.1042 26.3333C41.0417 24.1458 40.2292 22.3333 37.2917 22.3333H30.8542V7.33334C30.8542 3.83334 28.9584 3.12501 26.6459 5.75001L10.875 23.6667C8.95838 25.875 9.77088 27.6667 12.6876 27.6667Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
     )
 
@@ -43,7 +41,7 @@ const TheFuture = () => {
         { title: 'Unlocking the Future: Powered by Blockchain!', icon: BlockchainSvg, desc: 'Discover the revolutionary potential of blockchain technology as it powers our platform, transforming the way we connect, collaborate, and create in the world of game development.' },
         { title: 'Unleashing Innovation: The Synergy of AI and Blockchain!', icon: AiSvg, desc: 'Experience the game-changing fusion of artificial intelligence and blockchain technology as our platform harnesses their combined potential to drive unprecedented innovation in the gaming industry.' },
         { title: 'Gamers Paradise: Exclusive Features Await!', icon: ControllerSvg, desc: 'Indulge in a one-of-a-kind gamelancing experience with our platforms exclusive features, tailor- made for passionate game developers and designers seeking unparalleled opportunities for creativity and collaboration.' },
-        { title: 'Your Talents, Your Rewards: Work and Shine!', icon: TetherSvg, desc: 'As you work your magic and achieve milestones on our platform, you will have the chance to turn your freelancer profile into a valuable NFT(Non- Fungible Token) and earn reward points, unlocking exciting opportunities for recognition and rewards.' }
+        { title: 'Your Talents, Your Rewards: Work and Shine!', icon: FlashSvg, desc: 'As you work your magic and achieve milestones on our platform, you will have the chance to turn your freelancer profile into a valuable NFT(Non- Fungible Token) and earn reward points, unlocking exciting opportunities for recognition and rewards.' }
     ]
 
     return (
