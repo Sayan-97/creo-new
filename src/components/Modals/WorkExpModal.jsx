@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { RxCrossCircled } from 'react-icons/rx'
 
-const WorkExpModal = ({ show, setExpModal }) => {
+const WorkExpModal = ({ show, setExpModal, handleExperienceChange }) => {
 
     const modalRef = useRef();
     
@@ -30,6 +30,28 @@ const WorkExpModal = ({ show, setExpModal }) => {
             years.push(i)
         }
         return years
+    }
+
+    // 
+    const [experience, setExperience] = useState({
+        company: '',
+        position: '',
+        startDate: '',
+        endDate: '',
+        description: ''
+    })
+
+    const handleChange = (e) => {
+        setExperience((prevExperience) => ({
+            ...prevExperience,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        handleExperienceChange(experience);
     }
 
     return show ? ReactDOM.createPortal(

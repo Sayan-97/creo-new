@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import axios from 'axios';
+import React, { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { RxCrossCircled } from 'react-icons/rx'
 
-const EducationModal = ({ show, setEdModal }) => {
+const EducationModal = ({ show, setEdModal, handleEducationChange }) => {
 
     const modalRef = useRef();
 
@@ -32,6 +33,29 @@ const EducationModal = ({ show, setEdModal }) => {
         return years
     }
 
+    // 
+
+    const [education, setEducation] = useState({
+        institution: '',
+        degree: '',
+        fieldOfStudy: '',
+        startDate: '',
+        endDate: ''
+    })
+
+    const handleChange = (e) => {
+        setEducation((prevEducation) => ({
+            ...prevEducation,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        handleEducationChange(education);
+    }
+
     return show ? ReactDOM.createPortal(
         <React.Fragment>
             <div className='fixed top-0 left-0 w-full h-full z-20 pt-8 pb-8 overflow-y-scroll hide-scrollbar' style={{ background: 'rgba(0, 0, 0, 0.52)' }}>
@@ -43,7 +67,7 @@ const EducationModal = ({ show, setEdModal }) => {
                         <RxCrossCircled onClick={setEdModal} className='text-xl cursor-pointer hover:rotate-90 transition-all ease-in-out duration-300' />
                     </div>
 
-                    <form className='w-full space-y-5'>
+                    <form onSubmit={handleSubmit} className='w-full space-y-5'>
                         {/* Title */}
                         <div class="w-full mb-2">
                             <label class="block text-white text-md font-medium mb-2" for="title">

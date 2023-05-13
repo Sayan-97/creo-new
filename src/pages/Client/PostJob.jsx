@@ -1,25 +1,77 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AiOutlinePlus } from 'react-icons/ai'
 import Doller from '../../assets/images/svg/dollar-circle.svg'
 import Clock from '../../assets/images/svg/clock.svg'
 import { RxCrossCircled } from 'react-icons/rx'
 import USDT from '../../assets/images/svg/USDT.svg'
 import Conversation from '../../assets/images/svg/book.svg'
+import axios from 'axios'
 
 const PostJob = () => {
 
     const [hourlyRate, setHourlyRate] = useState('')
 
-    const handleChange = () => {
+    const handleRateChange = (event) => {
         event.preventDefault()
         setHourlyRate(!hourlyRate)
     }
 
     const skills = ['UI/UX Designing', 'Web Design', ' Graphic Design', 'Mobile App Design', 'UX Designing', 'Figma'];
 
+    const [ job, setJob ] = useState({
+        title: '',
+        description: '',
+        budget: '',
+        budgetType: '',
+        requiredSkills: '',
+        expertiseLevel: '',
+        projectScope: '',
+        files: ''
+    })
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        setJob((prevJob) => ({
+            ...prevJob,
+            [e.target.name]: e.target.value
+        }))
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const { title,description,budget,budgetType,requiredSkills,expertiseLevel,projectScope,files } = job;
+
+        try {
+            const response = await axios.post('http://localhost:8080/api/jobs', {
+                title, 
+                description, 
+                budget, 
+                budgetType, 
+                requiredSkills, 
+                expertiseLevel, 
+                projectScope, 
+                files
+            })
+
+            const data = response.data;
+            console.log(data);
+
+            if (response.status === 200) {
+                navigate('/client/jobs/job-details')
+            } else {
+                console.log('Error:', data.error)
+            }
+
+        } catch (error) {
+            console.log('Error:', error)
+        }
+    }
+
     return (
-        <form action="" className='space-y-6'>
+        <form onSubmit={handleSubmit} className='space-y-6'>
 
             <div className='grid'>
                 <h4>Create a new <span className='textGrad'>Job post</span></h4>
@@ -155,7 +207,7 @@ const PostJob = () => {
 
                     <div className='flex max-md:flex-col items-center gap-5'>
 
-                        <button onClick={handleChange} className='bg-gradient-to-r from-cyan-400 to-violet-500 p-[1px] rounded-lg'>
+                        <button onClick={handleRateChange} className='bg-gradient-to-r from-cyan-400 to-violet-500 p-[1px] rounded-lg'>
                             <div className='bg-[#171717] flex items-center justify-center px-5 py-2 rounded-lg uppercase'>
                                 <AiOutlinePlus />Add Hourly rate
                             </div>

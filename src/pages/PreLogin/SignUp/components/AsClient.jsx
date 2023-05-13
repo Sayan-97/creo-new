@@ -1,27 +1,58 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { toggleUser } from '../../../../store/user/userSlice'
-
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleUser } from '../../../../store/user/userSlice';
+import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom';
 import avatar from '../../../../assets/images/forms/profile1.png'
-
 import { HiPlus } from 'react-icons/hi'
+import { useSelector } from 'react-redux';
 
 const AsClient = () => {
-
-    const dispatch = useDispatch()
-    const handleSignUpAsClient = () => (
-        dispatch(toggleUser('client'))
-    )
+    const dispatch = useDispatch();
+    const handleSignUpAsClient = () => dispatch(toggleUser('client'))
 
     const countries = ['USA', 'UK', 'Australia']
     const cities = ['ABC', 'ABC', 'ABC']
 
-    return (
-        <form action="" className='space-y-6'>
+    const [user, setUser] = useState({
+        name: '',
+        email: '',
+        password: '',
+        companyName: '',
+    });
 
+    const handleChange = (e) => {
+        setUser((prevUser) => ({
+            ...prevUser,
+            [e.target.name]: e.target.value,
+        }));
+    };
+
+    const navigate = useNavigate();
+
+    const sendRequest = async () => {
+        const response = await axios.post('http://localhost:8080/api/client/register', {
+            name: user.name,
+            email: user.email,
+            password: user.password,
+            companyName: user.companyName,
+        }).catch(err => console.log(err))
+        const data = await response.data
+        return data
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleSignUpAsClient();
+        sendRequest().then(() => navigate('/client/dashboard'))
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className='space-y-6'>
             <div className='grid justify-items-center'>
-                <h4>Sign Up to <span className='textGrad'>Hire Talent</span></h4>
+                <h4>
+                    Sign Up to <span className='textGrad'>Hire Talent</span>
+                </h4>
                 <p>To keep things safe & simple we need your personal information</p>
             </div>
 
@@ -33,22 +64,58 @@ const AsClient = () => {
 
             {/* Username */}
             <div className='grid gap-1'>
-                <label htmlFor="username">Username</label>
-                <input type="text" id='username' placeholder='Enter your username' />
+                <label htmlFor='username'>Username</label>
+                <input
+                    value={user.name}
+                    type='text'
+                    id='username'
+                    name='name'
+                    placeholder='Enter your username'
+                    onChange={handleChange}
+                />
             </div>
 
             {/* Email */}
             <div className='grid gap-1'>
-                <label htmlFor="email">Email</label>
-                <input type="email" id='email' placeholder='Enter your email' />
+                <label htmlFor='email'>Email</label>
+                <input
+                    value={user.email}
+                    type='email'
+                    id='email'
+                    name='email'
+                    placeholder='Enter your email'
+                    onChange={handleChange}
+                />
             </div>
+
+            {/* Password */}
+            <div className='grid gap-1'>
+                <label htmlFor='password'>Password</label>
+                <input
+                    value={user.password}
+                    type='password'
+                    id='password'
+                    name='password'
+                    placeholder='Enter your Password'
+                    onChange={handleChange}
+                />
+            </div>
+
+            
 
             <div className='grid md:grid-cols-2 gap-2'>
 
                 {/* Company Name */}
                 <div className='grid gap-1'>
-                    <label htmlFor="company">Company Name</label>
-                    <input type="text" id='company' placeholder='Enter your company name' />
+                    <label htmlFor='company'>Company Name</label>
+                    <input
+                        value={user.companyName}
+                        type='text'
+                        id='company'
+                        name='companyName'
+                        placeholder='Enter your company name'
+                        onChange={handleChange}
+                    />
                 </div>
 
                 {/* DOB */}
@@ -104,13 +171,14 @@ const AsClient = () => {
 
             {/* Submit */}
             <div className='flex justify-center'>
-                <Link to='/client/dashboard'>
-                    <button onClick={handleSignUpAsClient} className='primary px-5 py-2'>Sign Up</button>
-                </Link>
+                <button type='submit' className='primary px-5 py-2'>
+                    Sign Up
+                </button>
             </div>
 
+            <Link to='/client/dashboard' onClick={handleSignUpAsClient}>Click Me</Link>
         </form>
-    )
-}
+    );
+};
 
-export default AsClient
+export default AsClient;
