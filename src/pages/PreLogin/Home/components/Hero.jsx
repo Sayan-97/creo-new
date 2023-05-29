@@ -32,7 +32,7 @@ const Hero = () => {
                         <button className='secondary w-36 h-14 before:content-["Find_Talent"]'>Find Talent</button>
                     </div>
 
-                    <div className='grid gap-6'>
+                    {/* <div className='grid gap-6'>
                         <h6 className='font-medium'>Trusted By</h6>
                         <div className='w-full flex flex-wrap gap-4'>
                             <div className='flex flex-wrap items-center'>
@@ -45,7 +45,7 @@ const Hero = () => {
                                 }
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 

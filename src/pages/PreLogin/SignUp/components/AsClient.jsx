@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { toggleUser } from '../../../../store/user/userSlice';
+import { authActions } from '../../../../store/user/userSlice';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import avatar from '../../../../assets/images/forms/profile1.png'
 import { HiPlus } from 'react-icons/hi'
-import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const AsClient = () => {
-    const dispatch = useDispatch();
-    const handleSignUpAsClient = () => dispatch(toggleUser('client'))
+
+    const history = useNavigate();
+
+    const dispatch = useDispatch()
+    
 
     const countries = ['USA', 'UK', 'Australia']
     const cities = ['ABC', 'ABC', 'ABC']
 
+    // ======================================= //
     const [user, setUser] = useState({
         name: '',
         email: '',
@@ -28,7 +31,7 @@ const AsClient = () => {
         }));
     };
 
-    const navigate = useNavigate();
+    
 
     const sendRequest = async () => {
         const response = await axios.post('http://localhost:8080/api/client/register', {
@@ -43,9 +46,9 @@ const AsClient = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleSignUpAsClient();
-        sendRequest().then(() => navigate('/client/dashboard'))
+        sendRequest().then(() => dispatch(authActions.toggleUser('client'))).then(() => history('/client/dashboard'));
     };
+    // ======================================= //
 
     return (
         <form onSubmit={handleSubmit} className='space-y-6'>
@@ -176,7 +179,7 @@ const AsClient = () => {
                 </button>
             </div>
 
-            <Link to='/client/dashboard' onClick={handleSignUpAsClient}>Click Me</Link>
+            {/* <Link to='/client/dashboard' onClick={handleSignUpAsClient}>Click Me</Link> */}
         </form>
     );
 };

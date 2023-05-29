@@ -7,7 +7,7 @@ const Client = () => {
     return (
         <Routes>
             {/* Dashboard */}
-            <Route path='/client/dashboard' element={<Dashboard />}/>
+            <Route index path='/client/dashboard' element={<Dashboard />}/>
 
             {/* Messages */}
             <Route path='/client/messages' element={<Messages />}/>

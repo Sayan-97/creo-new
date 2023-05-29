@@ -33,8 +33,7 @@ const EducationModal = ({ show, setEdModal, handleEducationChange }) => {
         return years
     }
 
-    // 
-
+    // ======================================= //
     const [education, setEducation] = useState({
         institution: '',
         degree: '',
@@ -55,6 +54,7 @@ const EducationModal = ({ show, setEdModal, handleEducationChange }) => {
 
         handleEducationChange(education);
     }
+    // ======================================= //
 
     return show ? ReactDOM.createPortal(
         <React.Fragment>

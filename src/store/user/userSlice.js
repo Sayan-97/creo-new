@@ -17,5 +17,5 @@ const userSlice = createSlice({
     },
 });
 
-export const { toggleUser, logoutSuccess } = userSlice.actions;
+export const authActions = userSlice.actions;
 export default userSlice.reducer;
