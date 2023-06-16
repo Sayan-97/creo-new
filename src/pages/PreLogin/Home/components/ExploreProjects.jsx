@@ -99,7 +99,7 @@ const ExploreProjects = () => {
                                 <div className='p-3 flex flex-col gap-5'>
                                     <div className='grid gap-3'>
                                         <h4>{item.title}</h4>
-                                        <p >{item.des}</p>
+                                        <span className='text-base'>{item.des}</span>
                                     </div>
                                     <div className='w-full flex justify-between'>
                                         <div className='w-1/2 flex gap-2 items-center'>
