@@ -1,35 +1,41 @@
 import React from 'react'
+import KarnImg from '../../../../assets/images/pages/KarnImg.jpg'
+import SwatanshuImg from '../../../../assets/images/pages/SwatanshuImg.jpg'
+import TopobarImg from '../../../../assets/images/pages/TopobarImg.jpg'
+import AmitImg from '../../../../assets/images/pages/AmitImg.jpg'
+import LavishImg from '../../../../assets/images/pages/LavishImg.jpg'
+import SayanImg from'../../../../assets/images/pages/SayanImg.jfif'
 
 const TheNetwork = () => {
 
     const team = [
         {
-            img: 'https://images.squarespace-cdn.com/content/v1/5aee389b3c3a531e6245ae76/1527417334547-B9VIPPG61XQYM2RZ08U2/DBS_George_Sampford.jpg?format=1000w',
-            name: 'Karn Chakravarty',
+            img: KarnImg,
+            name: 'Karn Chakerverty',
             desc: 'CEO'
         },
         {
-            img: 'https://www.corporatephotographerslondon.com/wp-content/uploads/2016/07/approachable-professional-headshots-London.jpg',
+            img: LavishImg,
             name: 'Lavish Pratap Singh',
             desc: 'Full-Stack Developer'
         },
         {
-            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiM0o_5tIn0DAmbB2wKS4GvurHctTwxD5om2vi4NOsj1ODDSGULrviZ-QV3ul8JYEMfO0&usqp=CAU',
+            img: TopobarImg,
             name: 'Topobar Layek',
             desc: 'Product Designer'
         },
         {
-            img: 'https://t3.ftcdn.net/jpg/04/23/59/74/360_F_423597477_AKCjGMtevfCi9XJG0M8jter97kG466y7.jpg',
+            img: SayanImg,
             name: 'Sayan Dey',
             desc: 'Frontend Developer'
         },
         {
-            img: 'https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg',
+            img: SwatanshuImg,
             name: 'Swatanshu Dey',
             desc: 'Graphics'
         },
         {
-            img: 'https://i.pinimg.com/736x/e5/13/33/e513339a410a97dd979c4c86c22a164b.jpg',
+            img: AmitImg,
             name: 'Amit Gorai',
             desc: 'UI/UX'
         },
