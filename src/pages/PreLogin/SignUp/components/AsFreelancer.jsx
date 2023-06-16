@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 import { useDispatch } from 'react-redux'
-// import { toggleUser } from '../../../../store/user/userSlice'
+import { toggleUser } from '../../../../store/user/userSlice'
 
 import Profile from '../../../../assets/images/svg/profile.svg'
 import Book from '../../../../assets/images/svg/book.svg'
@@ -21,10 +21,10 @@ import axios from 'axios'
 
 const AsFreelancer = () => {
 
-    // const dispatch = useDispatch()
-    // const handleSignUpAsFreelancer = () => (
-    //     dispatch(toggleUser('freelancer'))
-    // )
+    const dispatch = useDispatch()
+    const handleSignUpAsFreelancer = () => (
+        dispatch(toggleUser('freelancer'))
+    )
 
     const countries = ['USA', 'UK', 'Australia']
     const cities = ['ABC', 'ABC', 'ABC']
@@ -487,7 +487,7 @@ const AsFreelancer = () => {
 
                 <div className='flex justify-center'>
                     <Link to='/freelancer/findwork'>
-                        {/* <button onClick={handleSignUpAsFreelancer} className='primary px-5 py-2'>Sign Up</button> */}
+                        <button onClick={handleSignUpAsFreelancer} className='primary px-5 py-2'>Sign Up</button>
                     </Link>
                 </div>
             </form>

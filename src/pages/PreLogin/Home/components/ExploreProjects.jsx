@@ -16,16 +16,16 @@ const ExploreProjects = () => {
         {
             imgSrc: Card1Img,
             title: 'Game Tester',
-            des: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis.',
+            des: 'Meticulous and experienced game tester with a keen eye for detail and a passion for ensuring flawless gaming experiences. Skilled in executing comprehensive test plans, identifying bugs, and providing valuable insights to enhance game performance and user satisfaction.',
             avatar: avatar,
-            name: 'John Doe',
+            name: 'Larry Steve',
             created_At: '1 Day Ago',
             category: 'DEVELOPERS'
         },
         {
             imgSrc: Card2Img,
             title: 'Video Editor',
-            des: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis.',
+            des: 'Highly skilled video editor proficient in crafting visually compelling and engaging content. Experienced in utilizing industry-leading software and tools to create captivating videos, ensuring seamless transitions, and enhancing the overall storytelling.',
             avatar: avatar,
             name: 'Mia James',
             created_At: '1 Day Ago',
@@ -34,9 +34,9 @@ const ExploreProjects = () => {
         {
             imgSrc: Card3Img,
             title: 'Game Developer',
-            des: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis.',
+            des: 'Innovative and versatile game developer with a passion for creating immersive gaming experiences. Proficient in various programming languages and game development frameworks, capable of bringing unique ideas to life through captivating gameplay mechanics and engaging storytelling.',
             avatar: avatar,
-            name: 'Jason Doe',
+            name: 'Jason Roy',
             created_At: '1 Day Ago',
             category: 'DEVELOPERS'
         },
@@ -45,7 +45,7 @@ const ExploreProjects = () => {
             title: 'Game Designer',
             des: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis.',
             avatar: avatar,
-            name: 'Jason Doe',
+            name: 'Alex Hills',
             created_At: '1 Day Ago',
             category: 'DESIGNERS'
         },
@@ -54,7 +54,7 @@ const ExploreProjects = () => {
             title: 'Content Writer',
             des: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis.',
             avatar: avatar,
-            name: 'Jason Doe',
+            name: 'Steve Smith',
             created_At: '1 Day Ago',
             category: 'DESIGNERS'
         },
@@ -63,7 +63,7 @@ const ExploreProjects = () => {
             title: 'Copywriter',
             des: 'Lorem ipsum dolor sit amet consectetur. Est sed nunc gravida nisl tellus vulputate molestie faucibus. Massa porta mollis vitae malesuada elit dignissim pellentesque turpis.',
             avatar: avatar,
-            name: 'Jason Doe',
+            name: 'Dave Watson',
             created_At: '1 Day Ago',
             category: 'DESIGNERS'
         },

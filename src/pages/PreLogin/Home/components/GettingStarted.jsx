@@ -32,7 +32,7 @@ const GettingStarted = () => {
                         <p className='text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text uppercase lg:text-lg font-extrabold sm:text-base' style={{ backgroundSize: '20% 100%' }}>create</p>
                         <div className='grid gap-3'>
                             <h5>Create Your Profile</h5>
-                            <p className='text-white'>Whether you're a freelancer or client, simply sign up for an account and navigate to your profile settings, add your details and portfolio to showcase your skills and attract potential clients or freelancers. Perfect Jobs are Waiting for you.</p>
+                            <p className='text-white'>Whether you're a freelancer or client, simply sign up for an account and navigate to your profile settings, add your details and portfolio to showcase your skills and attract potential clients or freelancers. </p>
                             <a href="/" className='no-underline'><h5 className='flex items-center gap-2'>Get Started <BsArrowRight /></h5></a>
                         </div>
                         <img src={Card3Img} alt="img" className='absolute right-0 bottom-0 z-[-3] w-full' />
@@ -44,7 +44,7 @@ const GettingStarted = () => {
                         <p className='text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text uppercase lg:text-lg font-extrabold sm:text-base' style={{ backgroundSize: '15% 100%' }}>earn</p>
                         <div className='grid gap-3'>
                             <h5>Go to Work</h5>
-                            <p className='text-white'>Getting to work on Creo Network is super easy. As a freelancer, browse our job listings to find opportunities. As a client, post your job listing and the skills you're looking for. That's all it takes.</p>
+                            <p className='text-white'>Getting to work on Creo Network is super easy. As a freelancer, browse our job listings to find opportunities. As a client, post your job listing and the skills you're looking for. That's all it takes. Perfect Jobs are Waiting for you.</p>
                             <a href="/" className='no-underline'><h5 className='flex items-center gap-2'>Get Started <BsArrowRight /></h5></a>
                         </div>
                         <img src={Card4Img} alt="img" className='absolute right-0 bottom-0 z-[-3]' />

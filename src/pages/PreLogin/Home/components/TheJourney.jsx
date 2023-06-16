@@ -8,38 +8,35 @@ const TheJourney = () => {
 
     const roadmap = [
         {
+            tag: 'Igniting the Spark (Months 1-3)',
             listItems: [
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie"
+                "Lay the foundation for Creo Network by building a robust blockchain-powered freelance marketplace exclusively for gamers.",
+                "Engage passionate gamers and freelancers, onboard them onto the platform, and foster a vibrant community that thrives on collaboration and opportunity.",
+                "Conduct rigorous testing and optimization to ensure a seamless user experience, while implementing top-notch security measures to safeguard user data and transactions.",
             ]
         },
         {
+            tag: 'Expanding Horizons (Months 4-6)',
             listItems: [
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie"
+                "Propel Creo Network to new heights by implementing targeted marketing strategies and partnerships to attract a diverse range of gamers and clients.",
+                "Forge strategic alliances with game development studios, industry influencers, and esports organizations to amplify Creo Network's presence and credibility.",
+                "Continuously innovate by introducing exciting features and services, tailored to the evolving needs of our dynamic community.",
             ]
         },
         {
+            tag: 'Cultivating Growth (Months 7-9)',
             listItems: [
-                "Lorem ipsum dolor sit amet.",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
+                "Cultivate rapid growth by establishing strong collaborations with renowned game publishers, tapping into exclusive freelance opportunities and prestigious projects.",
+                "Embrace the power of AI algorithms and machine learning to create a smarter, more efficient matching process, connecting gamers with the perfect clients and projects.",
+                "Launch a captivating referral program, empowering our community to become ambassadors and fuel our organic expansion.",
             ]
         },
         {
+            tag: 'Ecosystem Flourishing (Months 10-12)',
             listItems: [
-                "Lorem ipsum dolor sit amet consectetur.",
-                "Est sed nunc gravida nisl tellus vulputate molestie",
-                "Lorem ipsum dolor sit amet consectetur.",
+                "Empower our community further by introducing a decentralized governance model, allowing users to actively participate in shaping the future of Creo Network.",
+                "Collaborate with like-minded blockchain projects to unlock cross-platform functionality, expanding the ecosystem and fostering interoperability.",
+                "Continuously evolve and enhance the platform based on user feedback, industry trends, and cutting-edge technologies, ensuring Creo Network remains the pinnacle of the freelance gaming revolution.",
             ]
         },
     ]
@@ -49,7 +46,7 @@ const TheJourney = () => {
             <div className='relative w-full flex flex-col items-center z-10'>
 
                 {/* Background Pics */}
-                <img src={BgGrad} alt="img" className='absolute max-md:hidden max-lg:top-[30%]' />
+                <img src={BgGrad} alt="img" className='absolute max-md:hidden max-lg:top-[30%] top-[10%]' />
                 <img src={Sphere} alt="img" className='absolute w-[6%] z-[-1] bottom-[15%] right-0' />
 
                 {/* Background Gradients Left */}
@@ -67,18 +64,19 @@ const TheJourney = () => {
 
                     {/* For PC */}
                     <div className='relative w-full max-lg:hidden lg:flex flex-col justify-center mt-20 gap-24'>
-                        <div className='absolute w-[2px] lg:h-[1000px] 3xl:h-[1300px] bg-gradient-to-b from-cyan-400 to-purple-500 top-0 left-0 lg:left-[50%] lg:transform lg:translate-x-[-50%]'></div>
+                        <div className='absolute w-[2px] lg:h-[1300px] 3xl:h-[1600px] bg-gradient-to-b from-cyan-400 to-purple-500 top-0 left-0 lg:left-[50%] lg:transform lg:translate-x-[-50%]'></div>
 
                         <div className='grid 3xl:gap-16 3xl:mt-10'>
                             {roadmap.map((items, index) => {
                                 return (
                                     <div className={`w-full relative flex items-center justify-between gap-40 ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
                                         <div className={`w-[30%] bg-[#171717] rounded-xl px-2 py-4 ${index % 2 === 0 ? 'ml-28' : 'mr-28'}`}>
+                                            <p className='mb-2'>{items.tag}</p>
                                             <ul className='w-full text-white grid gap-2'>
                                                 {
                                                     items.listItems.map((list) => {
                                                         return (
-                                                            <li className='list-disc text-md ml-5'>{list}</li>
+                                                            <li className='list-disc text-base ml-5'>{list}</li>
                                                         )
                                                     })
                                                 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { authActions } from '../../../../store/user/userSlice';
+import { authActions, toggleUser } from '../../../../store/user/userSlice';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import avatar from '../../../../assets/images/forms/profile1.png'
@@ -49,6 +49,10 @@ const AsClient = () => {
         sendRequest().then(() => dispatch(authActions.toggleUser('client'))).then(() => history('/client/dashboard'));
     };
     // ======================================= //
+
+    const handleSignUpAsClient = () => {
+        dispatch(toggleUser('client'))
+    }
 
     return (
         <form onSubmit={handleSubmit} className='space-y-6'>
@@ -179,7 +183,7 @@ const AsClient = () => {
                 </button>
             </div>
 
-            {/* <Link to='/client/dashboard' onClick={handleSignUpAsClient}>Click Me</Link> */}
+            <Link to='/client/dashboard' onClick={handleSignUpAsClient}>Click Me</Link>
         </form>
     );
 };
